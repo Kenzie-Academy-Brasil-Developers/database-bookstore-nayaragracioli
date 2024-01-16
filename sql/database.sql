@@ -8,7 +8,6 @@ CREATE TABLE authors(
     "bio" TEXT NOT NULL
 );
 
-SELECT * FROM authors;
 
 CREATE TABLE contact_infos(
     "id" SERIAL PRIMARY KEY,
@@ -18,7 +17,6 @@ CREATE TABLE contact_infos(
     FOREIGN KEY ("authorId") REFERENCES authors("id") ON DELETE CASCADE
 );
 
-SELECT * FROM contact_infos;
 
 CREATE TABLE books(
     "id" SERIAL PRIMARY KEY,
@@ -30,7 +28,6 @@ CREATE TABLE books(
     FOREIGN KEY ("authorId") REFERENCES authors("id") ON DELETE SET NULL
 );
 
-SELECT * FROM books;
 
 CREATE TABLE categories(
     "id" SERIAL PRIMARY KEY,
@@ -39,7 +36,6 @@ CREATE TABLE categories(
     "updateAt" TIMESTAMP NOT NULL
 );
 
-SELECT * FROM categories;
 
 CREATE TABLE books_categories(
     "bookId" INTEGER NOT NULL,
@@ -48,4 +44,3 @@ CREATE TABLE books_categories(
     FOREIGN KEY ("categoryId") REFERENCES categories("id") ON DELETE CASCADE
 );
 
-SELECT * FROM books_categories;
