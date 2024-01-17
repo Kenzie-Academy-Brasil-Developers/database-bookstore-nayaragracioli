@@ -1,6 +1,6 @@
-DELETE FROM books WHERE "id" = 2;
+DELETE FROM books WHERE "name" = 'Jogos Vorazes';
 
-DELETE FROM authors where "id" = 2;
+DELETE FROM authors WHERE  "name" = 'J. K. Rowling';
 
-DELETE FROM authors where "id" = 3;
+DELETE FROM authors WHERE  "name" = 'Osvaldo Silva';
 
